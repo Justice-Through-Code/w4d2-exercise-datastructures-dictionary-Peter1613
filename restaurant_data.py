@@ -4,21 +4,26 @@
 '''
 
 restaurant_1 = {
-    "name": "Four Barrel Coffee",
-    "url": "https://www.yelp.com/biz/four-barrel-coffee-san-francisco",
-    "latitude": 37.7670169511878,
-    "longitude": -122.42184275,
-    "city": "San Francisco",
-    "country": "US",
-    "state": "CA",
-    "address": "375 Valencia St",
-    "zip_code": "94113",
-    "distance": 1604.23,
-    "transactions": ["pickup", "delivery"]
+    "name:": "Four Barrel Coffee",
+    "url:": "https://www.yelp.com/biz/four-barrel-coffee-san-francisco",
+    "latitude:":  "37.7670169511878",
+    "longitude:": "-122.42184275",
+    "city:": "San Francisco",
+    "country:": "US",
+    "state:": "CA",
+    "address:": "375 Valencia St",
+    "zip_code:": "94113",
+    "distance:": "1604.23",
+    "transactions:": ['pickup', 'delivery']
 }
 
-
 def explore_data():
+    print(restaurant_1 ["url:"])
+    print(restaurant_1 ["latitude:"], restaurant_1 ["longitude:"])
+    print("375 Valencia St, San Francisco, CA, 94113") # Not sure if this 
+    # is the way I was intended to do it but no other way worked that I  tried. 
+    #if statement, str, "," between each key value pair, none worked
+    
     # 1.1 TODO: Print the URL of the website of Four Barrel Coffee.
 
     # 1.2 TODO: Print the latitude and longitude of Four Barrel Coffee, using one print statement.
@@ -27,8 +32,19 @@ def explore_data():
     # it should include the address, city, state and the zip code, with commas between them e.g.:
     # "375 Valencia St, San Francisco, CA, 94113"
 
+# explore_data()
 
 def favorite_restaurant():
+    favorite_restaurant = {'name': 'Islands', 'address': '10848 W Pico Blvd', 
+                           'favorite_dish': 'Tortilla Soup'
+    }
+              
+    print(favorite_restaurant)
+    del favorite_restaurant["favorite_dish"]
+    print(favorite_restaurant)
+    favorite_restaurant["address"] = "116th & Broadway, NY 10016"
+    print(favorite_restaurant["address"])
+    
     # Let's ask the user for some information about their favorite restaurant
 
     # 2.1 TODO: Create an empty dictionary in a variable called `favorite_restaurant`
@@ -54,9 +70,14 @@ def favorite_restaurant():
 
     # 2.7 TODO: Print out the restaurant's new address by printing the dictionary's value 
     # for the key `address`
+    
+# favorite_restaurant()
 
 
 def clean_print():
+    for key, value in restaurant_1.items():
+        print(key, value)
+        
     # It's hard to read the contents of a dictionary when we print the whole thing out.
 
     # 3.1 TODO: Instead, loop through each item-pair in the `restaurant_1` dictionary
@@ -64,3 +85,5 @@ def clean_print():
     #      `name: Four Barrel Coffee
     #       url: https://www.yelp.com/biz/four-barrel-coffee-san-francisco`
     # etc etc
+
+# clean_print()
